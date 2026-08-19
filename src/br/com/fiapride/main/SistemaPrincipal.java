@@ -8,7 +8,6 @@ public class SistemaPrincipal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		/*
 		Passageiro passageiro1 = new Passageiro();
 		passageiro1.nome = "Ana Silva";
 		passageiro1.saldo = 50;
@@ -17,10 +16,17 @@ public class SistemaPrincipal {
 		passageiro2.nome = "Carlos souza";
 		passageiro2.saldo = 12.5;
 		
-		System.out.println("- - - Sistema FiapRide - - -");
-		System.out.println("Passageiro: " + passageiro1.nome + " | Saldo: R$" + passageiro1.saldo);
-		System.out.println("Passageiro : " + passageiro2.nome + " | Saldo: R$ " + passageiro2.saldo);
-		*/
+		System.out.println("____________________________________________");
+		System.out.println("|                                          |");
+		System.out.println("|       - - - Sistema FiapRide - - -       |");
+		System.out.println("|__________________________________________|");
+		System.out.println("|Passageiro: " + passageiro1.nome + "    | Saldo: R$" + passageiro1.saldo + "  |");
+		System.out.println("|Passageiro: " + passageiro2.nome + " | Saldo: R$ " + passageiro2.saldo + " |");
+		System.out.println("|__________________________________________|");
+		System.out.println("");
+		
+		System.out.println("");
+		
 		
 		Kindle kindle1 = new Kindle();
 		kindle1.id = "A1";
@@ -34,10 +40,14 @@ public class SistemaPrincipal {
 		kindle2.cor = "cinza";
 		kindle2.capacidadeEmGB = 4.0;
 		
-		System.out.println(" - - - Consulta de Dispositivo Kindle - - -");
+		System.out.println("_____________________________________________________");
+		System.out.println("|                                                   |");
+		System.out.println("|     - - - Consulta de Dispositivo Kindle - - -    |");
+		System.out.println("|___________________________________________________|");
 		System.out.println("| Dispositivo |  Versão  |  Cor  | Capacidade em GB |");
 		System.out.println("|      " + kindle1.id + "     |   " + kindle1.versao + "    | " + kindle1.cor + " |        " + kindle1.capacidadeEmGB + "       |");
 		System.out.println("|      " + kindle2.id + "     |   " + kindle2.versao + "    | " + kindle2.cor + " |        " + kindle2.capacidadeEmGB + "       |"   );
+		System.out.println("|___________________________________________________|");
 
 	}
 
