@@ -1,54 +1,40 @@
 package br.com.fiapride.main;
 
 import br.com.fiapride.model.Passageiro;
-import br.com.fiapride.model.Kindle;
 
 public class SistemaPrincipal {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		Passageiro passageiro1 = new Passageiro();
-		passageiro1.nome = "Ana Silva";
-		passageiro1.saldo = 50;
-		
-		Passageiro passageiro2 = new Passageiro();
-		passageiro2.nome = "Carlos souza";
-		passageiro2.saldo = 12.5;
-		
-		System.out.println("____________________________________________");
-		System.out.println("|                                          |");
-		System.out.println("|       - - - Sistema FiapRide - - -       |");
-		System.out.println("|__________________________________________|");
-		System.out.println("|Passageiro: " + passageiro1.nome + "    | Saldo: R$" + passageiro1.saldo + "  |");
-		System.out.println("|Passageiro: " + passageiro2.nome + " | Saldo: R$ " + passageiro2.saldo + " |");
-		System.out.println("|__________________________________________|");
-		System.out.println("");
-		
-		System.out.println("");
-		
-		
-		Kindle kindle1 = new Kindle();
-		kindle1.id = "A1";
-		kindle1.versao = 1.0;
-		kindle1.cor = "preto";
-		kindle1.capacidadeEmGB = 4.0;
-		
-		Kindle kindle2 = new Kindle();
-		kindle2.id = "A2";
-		kindle2.versao = 1.0;
-		kindle2.cor = "cinza";
-		kindle2.capacidadeEmGB = 4.0;
-		
-		System.out.println("_____________________________________________________");
-		System.out.println("|                                                   |");
-		System.out.println("|     - - - Consulta de Dispositivo Kindle - - -    |");
-		System.out.println("|___________________________________________________|");
-		System.out.println("| Dispositivo |  Versão  |  Cor  | Capacidade em GB |");
-		System.out.println("|      " + kindle1.id + "     |   " + kindle1.versao + "    | " + kindle1.cor + " |        " + kindle1.capacidadeEmGB + "       |");
-		System.out.println("|      " + kindle2.id + "     |   " + kindle2.versao + "    | " + kindle2.cor + " |        " + kindle2.capacidadeEmGB + "       |"   );
-		System.out.println("|___________________________________________________|");
+		// INSTANCIAÇÃO
 
+		// Criando os objetos e método adicionarSaldo
+		Passageiro passageiro1 = new Passageiro("Ana Silva", "111.111.111-11");
+		System.out.println("Recarga do passageiro " + passageiro1.nome + ".");
+		passageiro1.adicionarSaldo(100.0);
+				
+		Passageiro passageiro2 = new Passageiro("Carlos Souza", "111.111.111-12");
+		System.out.println("Recarga do passageiro " + passageiro2.nome + ".");
+		passageiro2.adicionarSaldo(50.0);
+		
+		// Printando dados dos passageiros
+		System.out.println("- - - Sistema FiapRide - - -");
+		System.out.println("Passageiro: " + passageiro1.nome + " | CPF: " + passageiro1.cpf + " | Saldo: R$" + passageiro1.saldo + " |");
+		System.out.println("Passageiro : " + passageiro2.nome + " | CPF: " + passageiro2.cpf + " | Saldo: R$" + passageiro2.saldo + " |");
+		System.out.println();
+
+		// Método de pagarViagem
+		System.out.println("Pagando viagem do passageiro " + passageiro1.nome + "...");
+		passageiro1.pagarViagem(20);
+		
+		System.out.println("Pagando viagem do passageiro " + passageiro2.nome + "...");
+		passageiro2.pagarViagem(20);
+		
+		// Printando dados dos passageiros atualizados pós pagamento de viagem 
+		System.out.println("- - - Sistema FiapRide - - -");
+		System.out.println("Passageiro: " + passageiro1.nome + " | CPF: " + passageiro1.cpf + " | Saldo: R$" + passageiro1.saldo + " |");
+		System.out.println("Passageiro : " + passageiro2.nome + " | CPF: " + passageiro2.cpf + " | Saldo: R$" + passageiro2.saldo + " |");
+		System.out.println();
+		
 	}
 
 }
